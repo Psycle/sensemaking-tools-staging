@@ -1,0 +1,9 @@
+# Some additional directories are ignored by default.
+# See https://prettier.io/docs/ignore.html#ignoring-files-prettierignore
+
+# Ignore temp/compiled files
+site
+node_modules
+
+# Ignore all SCSS/CSS files (Stylelint takes care of this)
+**/*.{scss,sass,css}
