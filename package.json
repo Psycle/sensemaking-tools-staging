@@ -15,7 +15,8 @@
     "node": "22"
   },
   "author": "",
-  "license": "ISC",
+  "license": "UNLICENSED",
+  "private": true,
   "description": "",
   "devDependencies": {
     "@google/glue": "file:_glue",
