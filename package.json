@@ -1,6 +1,10 @@
 {
   "name": "sensemaker",
   "version": "1.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.psycle.com/google/jigsaw/sensemaking-tools-prototype.git"
+  },
   "main": "index.js",
   "scripts": {
     "dev": "webpack --watch --mode=development",
