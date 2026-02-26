@@ -27,6 +27,5 @@ include:
   - component: $CI_SERVER_FQDN/psycle-internal/gitlab-ci-templates/licenses@$CI_V2_LATEST_RELEASE
     inputs:
       excludes_npm: '/_glue/package.json'
-      overrides_npm: '@google/glue'
   - component: $CI_SERVER_FQDN/psycle-internal/gitlab-ci-templates/vulnerabilities@$CI_V2_LATEST_RELEASE
   - component: $CI_SERVER_FQDN/psycle-internal/gitlab-ci-templates/sast@$CI_V2_LATEST_RELEASE
