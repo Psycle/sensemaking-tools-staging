@@ -22,10 +22,15 @@ include:
       javascript_file_matches: '**/*.{js,cjs,mjs,ts,jsx,tsx}'
       javascript_includes:
         - '**/*.{js,cjs,mjs,ts,jsx,tsx}'
+      javascript_excludes:
+        - '.psycle/**'
+        - '_glue/**'
       scss_includes:
         - 'src/styles/**/*.scss'
   - component: $CI_SERVER_FQDN/psycle-internal/gitlab-ci-templates/licenses@$CI_V2_LATEST_RELEASE
     inputs:
-      excludes_npm: '/_glue/package.json'
+      excludes_npm: '_glue'
   - component: $CI_SERVER_FQDN/psycle-internal/gitlab-ci-templates/vulnerabilities@$CI_V2_LATEST_RELEASE
+    inputs:
+      excludes_npm: '_glue'
   - component: $CI_SERVER_FQDN/psycle-internal/gitlab-ci-templates/sast@$CI_V2_LATEST_RELEASE
