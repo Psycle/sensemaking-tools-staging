@@ -1,0 +1,60 @@
+// @todo move these to colors/_variables.scss when merged and update refs
+$link-color: inherit;
+$link-color-hover: #4285f4;
+
+body {
+  font-family: 'Google Sans', Arial, Helvetica, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+  text-wrap: pretty;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 1.25;
+  margin-bottom: 24px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.35;
+  margin-bottom: 14px;
+}
+
+h4,
+.glue-card__content .glue-headline {
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.35;
+  margin-bottom: 0px;
+}
+
+a {
+  color: $link-color;
+  transition: color .2s ease;
+
+  &:hover,
+  &:active {
+    color: $link-color-hover;
+  }
+}
