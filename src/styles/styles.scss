@@ -1,7 +1,7 @@
 // Import Glue core layout components
 @use '@google/glue/lib/core';
 @use '@google/glue/lib/links';
-@use '@google/glue/lib/typography';
+@use '@google/glue/lib/typography' as glue-typography;
 @use '@google/glue/lib/page';
 @use '@google/glue/lib/breakpoints';
 @use '@google/glue/lib/buttons';
@@ -27,7 +27,7 @@
 @use '@google/glue/lib/spacers/mixins' as mixins;
 
 // Our stuff
-@use './app/webfonts/webfonts';
+@use './app/typography/typography';
 
 @use './components/bundle-error/bundle-error';
 @use './components/link-bar-dropdown/link-bar-dropdown';
@@ -35,11 +35,6 @@
 // Custom overrides
 .glue-fullbleed {
   max-width: 3840px !important; // 4K UHD
-}
-
-.glue-body {
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
 }
 
 // Custom functions
@@ -691,73 +686,5 @@
 // Setting the default body
 html,
 body {
-  font-family: 'Jigsaw Sans', Helvetica, sans-serif !important;
   scroll-behavior: smooth;
-}
-
-.glue-body .glue-body--large,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-li,
-a {
-  font-family: 'Jigsaw Sans', Helvetica, sans-serif !important;
-  color: #1e2656;
-}
-
-a {
-  &:active,
-  &:focus,
-  &:hover,
-  &:visited {
-    color: #1e2656;
-  }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-li {
-  text-wrap: pretty;
-}
-
-h1 {
-  font-size: 2.4rem;
-  font-weight: bold;
-  line-height: 1.25;
-  margin-bottom: 24px;
-}
-
-h2 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  line-height: 1.25;
-  margin-bottom: 18px;
-}
-
-h3 {
-  font-size: 1.4rem;
-  font-weight: bold;
-  line-height: 1.35;
-  margin-bottom: 14px;
-}
-
-h4,
-.glue-card__content .glue-headline {
-  font-size: 1.2rem;
-  font-weight: bold;
-  line-height: 1.35;
-  margin-bottom: 0px;
-}
-
-p a {
-  font-weight: bold;
 }
