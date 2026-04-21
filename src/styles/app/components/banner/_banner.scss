@@ -11,6 +11,7 @@
 .app-banner__illustration {
   display: flex;
   justify-content: center;
+  overflow: hidden;
 
   img {
     margin: auto;
