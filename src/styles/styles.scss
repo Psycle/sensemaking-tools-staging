@@ -27,16 +27,18 @@
 @use '@google/glue/lib/spacers/mixins' as mixins;
 
 // Our stuff
-@use './app/typography/typography';
-@use './app/colors/variables' as appColors;
-@use './app/components/link/link';
-@use './app/components/grid/grid';
-@use './app/components/core-capabilities-card/core-capabilities-card';
-@use './app/components/carousel/carousel' as appCarousel;
+@use 'app/colors/variables' as appColors;
+@use 'app/typography/typography';
+@use 'app/components/banner/banner';
+@use 'app/components/bundle-error/bundle-error';
+@use 'app/components/core-capabilities-card/core-capabilities-card';
+@use 'app/components/carousel/carousel' as appCarousel;
+@use 'app/components/grid/grid';
+@use 'app/components/header/header';
+@use 'app/components/hero/hero';
+@use 'app/components/link-bar-dropdown/link-bar-dropdown';
+@use 'app/components/link/link';
 
-@use './components/bundle-error/bundle-error';
-@use './components/header/header';
-@use './components/link-bar-dropdown/link-bar-dropdown';
 
 // Custom overrides
 .glue-fullbleed {
@@ -361,5 +363,4 @@
 html,
 body {
   scroll-behavior: smooth;
-  color: appColors.$primary-font;
 }

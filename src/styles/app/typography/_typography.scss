@@ -1,7 +1,9 @@
 @use '@google/glue/lib/breakpoints/mixins' as glue-breakpoints-mixins;
 @use '../colors/variables' as colors;
 
-body {
+body,
+.app-body,
+.app-body .app-body--large {
   font-family: 'Google Sans', Arial, Helvetica, sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -20,11 +22,18 @@ li {
   text-wrap: pretty;
 }
 
-h1 {
-  font-size: 2.4rem;
-  font-weight: bold;
-  line-height: 1.25;
-  margin-bottom: 24px;
+.app-headline {
+  color: inherit;
+
+  &.app-headline--headline-1 {
+    font-size: 3.25rem;
+    font-weight: 500;
+    line-height: 1.26;
+  }
+
+  &.app-headline--headline-4 {
+    font-weight: 500;
+  }
 }
 
 h2 {
