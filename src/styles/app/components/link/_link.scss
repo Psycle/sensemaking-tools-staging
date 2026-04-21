@@ -18,4 +18,13 @@ a {
     background: transparent;
     color: colors.$link-color-hover;
   }
+
+  &:has(> img) {
+    display: inline-block;
+
+    &:focus,
+    &:focus-visible {
+      background-color: transparent;
+    }
+  }
 }
