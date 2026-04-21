@@ -26,9 +26,13 @@ li {
   color: inherit;
 
   &.app-headline--headline-1 {
-    font-size: 3.25rem;
+    font-size: 2.6rem;
     font-weight: 500;
     line-height: 1.26;
+
+    @include glue-breakpoints-mixins.bp(lg) {
+      font-size: 3.25rem;
+    }
   }
 
   &.app-headline--headline-4 {
