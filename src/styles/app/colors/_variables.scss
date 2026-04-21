@@ -1,5 +1,7 @@
+@use '@google/glue/lib/colors/variables' as glue-colors-variables;
+
 $primary-font: #616161;
 $bg-grey: #F2F2ED;
 $line-grey: #BDBDBA;
 $link-color: inherit;
-$link-color-hover: #4285f4;
+$link-color-hover: glue-colors-variables.$blue-500;
