@@ -28,6 +28,9 @@
 
 // Our stuff
 @use './app/typography/typography';
+@use './app/colors/variables' as appColors;
+@use './app/components/link/link';
+@use './app/components/grid/grid';
 
 @use './components/bundle-error/bundle-error';
 @use './components/link-bar-dropdown/link-bar-dropdown';
@@ -573,16 +576,19 @@
 
 .g-entries {
   .g-entry {
-    border-bottom: solid 1px #a8afd2;
+    border-bottom: solid 1px appColors.$line-grey;
+    padding-bottom: 1.8rem;
+    margin-bottom: 1.8rem;
 
     &:last-of-type {
       border: none;
+      margin-bottom: 0;
     }
   }
 }
 
 .g-bg-grey {
-  background: #fafbfc;
+  background: appColors.$bg-grey;
 }
 
 .g-bg-blue-light {
@@ -687,4 +693,5 @@
 html,
 body {
   scroll-behavior: smooth;
+  color: appColors.$primary-font;
 }
