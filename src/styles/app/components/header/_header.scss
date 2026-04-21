@@ -14,7 +14,7 @@
 
   .app-header__bar--desktop {
     @include glue-breakpoints-mixins.bp(lg) {
-      background: url('../../../assets/images/blur-background.webp') 50% 50% no-repeat;
+      background: url('../../../../assets/images/blur-background.webp') 50% 50% no-repeat;
       background-size: cover;
       color: glue-colors-variables.$grey-0;
       height: 110px;
@@ -23,7 +23,7 @@
   }
 
   .app-header__bar--mobile {
-    background: url('../../../assets/images/blur-background.webp') 50% 50% no-repeat;
+    background: url('../../../../assets/images/blur-background.webp') 50% 50% no-repeat;
     background-size: cover;
     color: glue-colors-variables.$grey-0;
   }
