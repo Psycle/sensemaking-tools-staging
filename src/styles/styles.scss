@@ -9,7 +9,7 @@
 
 // Import Glue UI components
 @use '@google/glue/lib/header' as glue-header;
-@use '@google/glue/lib/footer';
+@use '@google/glue/lib/footer' as glue-footer;
 @use '@google/glue/lib/grids';
 @use '@google/glue/lib/cards';
 @use '@google/glue/lib/ytvideo';
@@ -33,6 +33,7 @@
 @use 'app/components/bundle-error/bundle-error';
 @use 'app/components/core-capabilities-card/core-capabilities-card';
 @use 'app/components/carousel/carousel' as appCarousel;
+@use 'app/components/footer/footer';
 @use 'app/components/grid/grid';
 @use 'app/components/header/header';
 @use 'app/components/hero/hero';
@@ -228,78 +229,6 @@
   &.glue-body--large,
   .glue-body--large {
     color: #ffffff !important;
-  }
-}
-
-.g-footer {
-  background: #121112;
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  li,
-  a {
-    color: #ffffff !important;
-  }
-
-  a {
-    &:active,
-    &:focus,
-    &:hover,
-    &:visited {
-      text-decoration: underline;
-      color: #ffffff !important;
-    }
-  }
-
-  .__site-logo {
-    svg {
-      fill: #ffffff;
-      width: 180px;
-    }
-  }
-
-  // Shared by both link blocks
-  .glue-footer__link {
-    background-color: transparent !important;
-
-    &:active,
-    &:focus,
-    &:hover,
-    &:visited {
-      color: #ffffff !important;
-    }
-  }
-
-  .__g-links {
-    display: flex;
-    flex-direction: column;
-
-    .glue-footer__global-links-list-item {
-      padding-block-end: 0px !important;
-      a {
-        font-weight: bold;
-        padding: 8px 0px;
-        min-height: unset;
-      }
-    }
-  }
-
-  .glue-footer__global-links {
-    padding: 0px !important;
-
-    .glue-footer__global-links-list-item {
-      padding-block-end: 0px !important;
-    }
-
-    a {
-      line-height: 1 !important;
-      font-size: 14px !important;
-    }
   }
 }
 
