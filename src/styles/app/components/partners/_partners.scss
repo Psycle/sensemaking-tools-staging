@@ -3,6 +3,8 @@
 
 .partners {
   &__content {
+    grid-column-gap: 0;
+
     &__column {
       height: 100%;
     }
@@ -11,14 +13,14 @@
   &__text {
     font-size: 1.35rem;
     line-height: 1.45;
-    padding-right: 64px;
+    padding-inline-end: 64px;
 
     @media #{glue-breakpoints.$media-query-lg} {
-      padding-right: 116px;
+      padding-inline-end: 82px;
     }
 
     @media #{glue-breakpoints.$media-query-xl} {
-      padding-right: 116px;
+      padding-inline-end: 82px;
     }
   }
 
@@ -27,17 +29,20 @@
     gap: 32px;
     flex-wrap: wrap;
     align-items: center;
+    padding-inline-start: 64px;
 
     @include glue-mixins.spacer(6, margin, top);
 
     @media #{glue-breakpoints.$media-query-lg} {
       margin-top: 20px;
       justify-content: space-between;
+      padding-inline-start: 82px;
     }
 
     @media #{glue-breakpoints.$media-query-xl} {
       margin-top: 20px;
       justify-content: space-between;
+      padding-inline-start: 82px;
     }
   }
 

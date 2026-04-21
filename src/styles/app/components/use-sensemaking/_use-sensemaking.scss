@@ -1,0 +1,47 @@
+@use '../../colors/variables' as colors;
+@use '@google/glue/lib/breakpoints/variables' as glue-breakpoints;
+
+.use-sensemaking {
+  &__content {
+    grid-column-gap: 0;
+
+    &__column {
+      height: 100%;
+
+      padding-inline-end: 82px;
+      border-inline-end: 1px solid colors.$line-grey-2;
+
+      &:last-of-type {
+        padding-inline-end: 0;
+        border-inline-end: none;
+        padding-inline-start: 82px;
+      }
+
+      @media #{glue-breakpoints.$media-query-sm-md-only} {
+        &,
+        &:last-of-type {
+          padding-inline-end: 0;
+          padding-inline-start: 0;
+          border-inline-end: none;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 1.5em;
+        }
+      }
+    }
+  }
+
+  &__text {
+    font-size: 1.375rem;
+    line-height: 1.45;
+  }
+
+  &__contact-us {
+    margin-top: 32px;
+
+    @media #{glue-breakpoints.$media-query-sm-md-only} {
+      margin-top: 1.5em;
+    }
+  }
+}
