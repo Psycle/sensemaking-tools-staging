@@ -1,0 +1,14 @@
+@use '../../colors/variables' as colors;
+
+a {
+  color: colors.$link-color;
+  text-decoration-thickness: .1em;
+  text-underline-offset: .1em;
+  transition: color .2s ease;
+
+  &:hover,
+  &:active {
+    background: transparent;
+    color: colors.$link-color-hover;
+  }
+}
