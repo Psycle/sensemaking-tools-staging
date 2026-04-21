@@ -31,6 +31,7 @@
 @use './app/colors/variables' as appColors;
 @use './app/components/link/link';
 @use './app/components/grid/grid';
+@use './app/components/core-capabilities-card/core-capabilities-card';
 
 @use './components/bundle-error/bundle-error';
 @use './components/link-bar-dropdown/link-bar-dropdown';
