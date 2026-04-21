@@ -49,12 +49,6 @@ h4,
   margin-bottom: 0px;
 }
 
-p {
-  & + & {
-    margin-block-start: 1.54em;
-
-    @include glue-breakpoints-mixins.bp(lg) {
-      margin-block-start: 1.46em;
-    }
-  }
+p + p {
+  margin-block-start: 1.5em;
 }
