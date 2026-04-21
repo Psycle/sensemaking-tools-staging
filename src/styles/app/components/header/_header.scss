@@ -36,12 +36,12 @@
 .app-header__logo-container {
   &,
   .app-header__logo-svg {
-    height: 20px;
-    width: 198px;
+    height: 18px;
+    width: 202px;
 
     @include glue-breakpoints-mixins.bp(lg) {
-      height: 25px;
-      width: 248px;
+      height: 22px;
+      width: 246px;
     }
   }
 }
