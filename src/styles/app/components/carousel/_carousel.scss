@@ -1,0 +1,153 @@
+@use '../../colors/variables' as colors;
+@use '../../viewport/variables' as viewport;
+@use '@google/glue/lib/breakpoints/_variables' as gb;
+
+.app-carousel {
+  &__nav-button {
+    background-color: transparent;
+    color: colors.$carousel-nav-color;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  &__slide {
+    height: 100%;
+    background-color: colors.$app-white;
+
+    @media #{gb.$media-query-sm-md-only} {
+      grid-auto-rows: max-content;
+    }
+
+    .glue-grid__col--align-middle {
+      @media #{gb.$media-query-sm-md-only} {
+        align-self: auto;
+      }
+    }
+
+    &__content-wrapper {
+      height: 100%;
+    }
+
+    &__content {
+      padding: 60px 98px 60px 60px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      &__p {
+        padding-right: calc(138px - 98px);
+      }
+
+      @media #{viewport.$media-query-md-lg-only} {
+        padding: 60px 20px 60px 60px;
+      }
+
+      @media #{gb.$media-query-md-only} {
+        padding: 48px;
+      }
+
+      @media #{gb.$media-query-sm-only} {
+        padding: 36px 24px 24px;
+      }
+    }
+
+    &__links {
+      margin-top: auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    &__link {
+      display: inline-block;
+    }
+
+    &__link-separator {
+      display: inline-block;
+      margin: 0 12px;
+      height: 30px;
+      border-left: 1px solid colors.$line-grey;
+    }
+
+    .glue-video,
+    img:not(.glue-video__preview-image) {
+      @media #{gb.$media-query-md-only} {
+        padding: 48px 48px 0 48px;
+      }
+    }
+
+    .glue-video__label {
+      display: none;
+    }
+
+    .glue-video__container--inline {
+      padding-bottom: 100%;
+    }
+  }
+
+  &__video-preview {
+    display: none;
+  }
+
+  &__video-quote {
+    background-color: colors.$carousel-quote-bg;
+    color: colors.$app-white;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    position: absolute;
+
+    @media #{gb.$media-query-sm-only} {
+      padding: 15px;
+    }
+
+    .glue-caption {
+      @media (max-width: 480px) {
+        font-size: 0.7rem;
+      }
+    }
+
+    .glue-body--large {
+      @media (max-width: 480px) {
+        font-size: 0.7rem;
+      }
+    }
+  }
+
+  &__video-play-button-container {
+    width: 5.5rem;
+    height: 5.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: colors.$video-play-button-container-color;
+    border-radius: 50%;
+    position: relative;
+    transition: background-color 0.2s ease;
+
+    // Match glue's approach to hover
+    &:hover {
+      box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    }
+  }
+
+  &__video-play-button {
+    color: colors.$video-play-button-color;
+    position: relative;
+    left: 1px; // Optical adjustment to visually center the icon within the container
+  }
+
+  &__navigation {
+    .glue-carousel__dot::before {
+      border-color: colors.$carousel-nav-indicator-color;
+      background-color: colors.$carousel-nav-indicator-color;
+    }
+
+    .glue-carousel__dot.glue-is-active::before {
+      border-color: colors.$carousel-nav-indicator-active-color;
+      background-color: colors.$carousel-nav-indicator-active-color;
+    }
+  }
+}

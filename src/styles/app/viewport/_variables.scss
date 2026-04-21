@@ -1,0 +1,7 @@
+@use '@google/glue/lib/breakpoints/variables' as glue-breakpoints-variables;
+
+$viewport-md-lg-max-width: 1295px;
+
+// Large breakpoint (laptop/small desktop)
+$media-query-md-lg: '(min-width: #{($viewport-md-lg-max-width + 1)})';
+$media-query-md-lg-only: '(min-width: #{(glue-breakpoints-variables.$viewport-md-max-width + 1)}) and (max-width: #{$viewport-md-lg-max-width})';

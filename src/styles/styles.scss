@@ -32,6 +32,7 @@
 @use './app/components/link/link';
 @use './app/components/grid/grid';
 @use './app/components/core-capabilities-card/core-capabilities-card';
+@use './app/components/carousel/carousel' as appCarousel;
 
 @use './components/bundle-error/bundle-error';
 @use './components/header/header';
@@ -40,6 +41,17 @@
 // Custom overrides
 .glue-fullbleed {
   max-width: 3840px !important; // 4K UHD
+}
+
+.glue-carousel__item[aria-hidden='true'] {
+  .app-carousel__slide {
+    .glue-video {
+      display: none;
+    }
+    .app-carousel__video-preview {
+      display: block;
+    }
+  }
 }
 
 // Custom functions
@@ -154,23 +166,6 @@
   }
 }
 
-#bowling-green-details-introduction {
-  h2 {
-    margin-bottom: 4px;
-  }
-
-  h3 {
-    font-weight: normal;
-    margin-bottom: 18px;
-  }
-
-  p {
-    &.glue-eyebrow {
-      margin-bottom: 4px;
-    }
-  }
-}
-
 #follow-us {
   h2 {
     @media #{gb.$media-query-lg} {
@@ -206,19 +201,6 @@
 }
 
 .glue-carousel__item {
-  &:nth-child(even) {
-    .g-slide {
-      background: #f2f4fa;
-    }
-  }
-  &:nth-child(odd) {
-    .g-slide {
-      background: #e8eaf3;
-    }
-  }
-  .g-video-preview {
-    display: none;
-  }
   &[aria-hidden='true'] {
     .g-slide {
       .glue-video {
@@ -228,59 +210,6 @@
         display: block;
       }
     }
-  }
-}
-
-.g-slide {
-  height: 100%;
-  @media #{gb.$media-query-sm-md-only} {
-    grid-auto-rows: max-content;
-  }
-  .glue-grid__col--align-middle {
-    @media #{gb.$media-query-sm-md-only} {
-      align-self: auto;
-    }
-  }
-  &__content {
-    padding: 60px 20px 52px 60px;
-    @media #{gb.$media-query-md-only} {
-      padding: 48px 48px 40px 48px;
-    }
-    @media #{gb.$media-query-sm-only} {
-      padding: 36px 24px 16px 24px;
-    }
-  }
-  .glue-video,
-  img:not(.glue-video__preview-image) {
-    @media #{gb.$media-query-md-only} {
-      padding: 48px 48px 0 48px;
-    }
-  }
-  .glue-video__label {
-    display: none;
-  }
-  .g-video-quote {
-    background-color: rgba(30, 38, 86, 0.9);
-    bottom: 0;
-    left: 0;
-    padding: 20px;
-    position: absolute;
-    @media #{gb.$media-query-sm-only} {
-      padding: 15px;
-    }
-    .glue-caption {
-      @media (max-width: 480px) {
-        font-size: 0.7rem;
-      }
-    }
-    .glue-body--large {
-      @media (max-width: 480px) {
-        font-size: 0.7rem;
-      }
-    }
-  }
-  .glue-video__container--inline {
-    padding-bottom: 100%;
   }
 }
 

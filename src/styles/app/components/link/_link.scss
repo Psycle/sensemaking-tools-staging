@@ -2,9 +2,16 @@
 
 a {
   color: colors.$link-color;
-  text-decoration-thickness: .1em;
   text-underline-offset: .1em;
   transition: color .2s ease;
+
+  &.glue-font-weight-medium {
+    text-decoration-thickness: .1em;
+  }
+
+  &:visited {
+    color: colors.$link-color;
+  }
 
   &:hover,
   &:active {
