@@ -1,6 +1,6 @@
-# Sensemaker
+# Sensemaking
 
-Sensemaker Microsite
+Jigsaw Sensemaking Microsite
 
 ## Getting Started
 
