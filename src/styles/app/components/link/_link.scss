@@ -14,6 +14,7 @@ a {
   }
 
   &:hover,
+  &:focus-visible,
   &:active {
     background: transparent;
     color: colors.$link-color-hover;
@@ -26,5 +27,9 @@ a {
     &:focus-visible {
       background-color: transparent;
     }
+  }
+
+  &:has(> svg) {
+    display: inline-block;
   }
 }

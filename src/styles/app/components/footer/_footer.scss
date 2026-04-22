@@ -96,6 +96,7 @@
   text-decoration: none;
 
   &,
+  &:focus-visible,
   &:hover {
     color: inherit;
   }
