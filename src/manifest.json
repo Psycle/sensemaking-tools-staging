@@ -6,8 +6,8 @@
   "icons": [
     { "sizes": "any", "src": "assets/images/favicon.svg", "type": "image/svg+xml" }
   ],
-  "background_color": "#1e2656",
+  "background_color": "#f2f2ed",
   "display": "standalone",
   "orientation": "portrait",
-  "theme_color": "#1e2656"
+  "theme_color": "#f2f2ed"
 }

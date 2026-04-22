@@ -2,6 +2,7 @@
 @use '@google/glue/lib/colors/variables' as glue-colors-variables;
 
 .app-header {
+  background: transparent;
   min-height: 64px;
 
   @include glue-breakpoints-mixins.bp(lg) {
