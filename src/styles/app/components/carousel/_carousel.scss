@@ -55,10 +55,10 @@
     }
 
     &__links {
-      margin-top: auto;
+      align-items: center;
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
+      margin-top: auto;
 
       @media #{gb.$media-query-sm-md-only} {
         margin-block-start: 1.5em;
@@ -66,14 +66,16 @@
     }
 
     &__link {
-      display: inline-block;
-    }
+      align-items: center;
+      display: inline-flex;
 
-    &__link-separator {
-      display: inline-block;
-      margin: 0 12px;
-      height: 30px;
-      border-left: 1px solid colors.$line-grey;
+      &:not(:last-child)::after {
+        border-left: 1px solid colors.$line-grey;
+        content: '';
+        display: inline-block;
+        height: 30px;
+        margin: 0 12px;
+      }
     }
 
     .glue-video,
