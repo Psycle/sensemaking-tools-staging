@@ -81,20 +81,25 @@
   }
 }
 
-.app-header__supplemental {
+.app-header__supplemental.glue-header__supplemental {
   &::before {
     display: none;
   }
 
   .app-header__link {
     &,
-    &:hover {
+    &:focus,
+    &:hover,
+    &:visited {
       color: inherit;
     }
 
+    &:focus,
     &:hover {
       background-color: transparent;
-      color: inherit;
+    }
+
+    &:hover {
       text-decoration: underline;
     }
   }
