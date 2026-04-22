@@ -27,6 +27,7 @@
 @use '@google/glue/lib/spacers/mixins' as mixins;
 
 // Our stuff
+@use 'app/colors/colors';
 @use 'app/colors/variables' as appColors;
 @use 'app/typography/typography';
 @use 'app/components/banner/banner';
@@ -200,36 +201,6 @@
       border: none;
       margin-bottom: 0;
     }
-  }
-}
-
-.g-bg-grey {
-  background: appColors.$bg-grey;
-}
-
-.g-bg-blue-light {
-  background: #e8eaf3;
-}
-
-.g-bg-blue-medium {
-  background: #455190;
-}
-
-.g-bg-blue-dark {
-  background: #1e2656;
-}
-
-.g-fg-white {
-  color: #ffffff;
-  &:active,
-  &:focus,
-  &:hover,
-  &:visited {
-    color: #ffffff !important;
-  }
-  &.glue-body--large,
-  .glue-body--large {
-    color: #ffffff !important;
   }
 }
 
