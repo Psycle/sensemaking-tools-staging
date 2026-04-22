@@ -29,7 +29,6 @@
     gap: 32px;
     flex-wrap: wrap;
     align-items: center;
-    padding-inline-start: 64px;
 
     @include glue-mixins.spacer(6, margin, top);
 
