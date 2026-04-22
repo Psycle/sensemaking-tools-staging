@@ -129,14 +129,14 @@
 }
 
 .glue-carousel__button--prev {
-  inset-inline-start: -64px;
+  inset-inline-start: -69px;
   @media #{gb.$media-query-sm-md-only} {
     display: none;
   }
 }
 
 .glue-carousel__button--next {
-  inset-inline-end: -64px;
+  inset-inline-end: -69px;
   @media #{gb.$media-query-sm-md-only} {
     display: none;
   }
