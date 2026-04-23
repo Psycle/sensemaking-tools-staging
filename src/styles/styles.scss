@@ -115,19 +115,6 @@
   }
 }
 
-#follow-us {
-  h2 {
-    @media #{gb.$media-query-lg} {
-      margin: 0;
-    }
-  }
-
-  .glue-body--large {
-    font-size: 1.25rem;
-    line-height: 1.4;
-  }
-}
-
 .glue-carousel__button--prev {
   inset-inline-start: -69px;
   @media #{gb.$media-query-sm-md-only} {

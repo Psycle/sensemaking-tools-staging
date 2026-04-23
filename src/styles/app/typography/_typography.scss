@@ -25,41 +25,38 @@ li {
 .app-headline {
   color: inherit;
 
-  &.app-headline--headline-1 {
-    font-size: 2.6rem;
+  &.app-headline--headline-1,
+  &.app-headline--headline-2,
+  // purposeful omission of headline-3 - not used in app
+  &.app-headline--headline-4,
+  &.app-headline--headline-5,
+  &.app-headline--headline-banner {
     font-weight: 500;
-    line-height: 1.26;
+  }
 
-    @include glue-breakpoints-mixins.bp(lg) {
-      font-size: 3.25rem;
+  // override as mobile to differ from headline-5 at these sizes
+  &.app-headline--headline-4 {
+    @include glue-breakpoints-mixins.bp(sm-only) {
+      font-size: 1.375rem;
     }
   }
 
-  &.app-headline--headline-4 {
-    font-weight: 500;
+  &.app-headline--headline-banner {
+    font-size: 1.25rem;
+    line-height: 1.4;
+
+    @include glue-breakpoints-mixins.bp(lg) {
+      font-size: 1.5rem;
+    }
   }
 }
 
 h2 {
-  font-size: 2rem;
-  font-weight: 500;
-  line-height: 1.3;
   margin-bottom: 22px;
 }
 
 h3 {
-  font-size: 1.4rem;
-  font-weight: 500;
-  line-height: 1.8;
   margin-bottom: 14px;
-}
-
-h4,
-.glue-card__content .glue-headline {
-  font-size: 1.2rem;
-  font-weight: bold;
-  line-height: 1.35;
-  margin-bottom: 0px;
 }
 
 p + p {

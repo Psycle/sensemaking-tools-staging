@@ -11,8 +11,6 @@
   }
 
   &__text {
-    font-size: 1.35rem;
-    line-height: 1.45;
     padding-inline-end: 64px;
 
     @media #{glue-breakpoints.$media-query-lg} {
