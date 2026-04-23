@@ -109,18 +109,6 @@
     @media #{gb.$media-query-sm-only} {
       padding: 15px;
     }
-
-    .glue-caption {
-      @media (max-width: 480px) {
-        font-size: 0.7rem;
-      }
-    }
-
-    .glue-body--large {
-      @media (max-width: 480px) {
-        font-size: 0.7rem;
-      }
-    }
   }
 
   &__video-play-button-container {

@@ -7,13 +7,6 @@
       height: auto;
     }
 
-    &__title {
-      font-size: 1.2rem;
-      font-weight: 500;
-      line-height: 2.2;
-      margin-bottom: 14px;
-    }
-
     // Move last card to centralise it in the 3-column layout on tablet
     &:last-child {
       @media (min-width: 600px) and (max-width: 1023px) {
