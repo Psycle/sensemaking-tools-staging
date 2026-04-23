@@ -11,13 +11,7 @@
   }
 
   &__text {
-    padding-inline-end: 64px;
-
     @media #{glue-breakpoints.$media-query-lg} {
-      padding-inline-end: 82px;
-    }
-
-    @media #{glue-breakpoints.$media-query-xl} {
       padding-inline-end: 82px;
     }
   }
