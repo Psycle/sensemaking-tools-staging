@@ -3,6 +3,28 @@
 @use '../../colors/variables' as colors;
 @use '../../viewport/variables' as viewport;
 
+%quote {
+  background-color: colors.$carousel-quote-bg;
+  color: colors.$app-white;
+  bottom: 0;
+  left: 0;
+  padding: 2.725rem;
+  position: absolute;
+
+  @include glue-breakpoints-mixins.bp(sm+md) { // stylelint-disable-line scss/operator-no-unspaced
+    padding: 1.725rem;
+  }
+}
+
+%quote-text {
+  @extend .glue-caption;
+
+  @media #{viewport.$media-query-sm-md-exclude} {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
 .app-carousel {
   &__nav-button {
     background-color: transparent;
@@ -101,29 +123,30 @@
     }
   }
 
+  &__image-with-quote {
+    position: relative;
+
+    &__quote {
+      @extend %quote;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      &__text {
+        @extend %quote-text;
+      }
+    }
+  }
+
   &__video-preview {
     display: none;
   }
 
   &__video-quote {
-    background-color: colors.$carousel-quote-bg;
-    color: colors.$app-white;
-    bottom: 0;
-    left: 0;
-    padding: 2.725rem;
-    position: absolute;
-
-    @include glue-breakpoints-mixins.bp(sm+md) { // stylelint-disable-line scss/operator-no-unspaced
-      padding: 1.725rem;
-    }
+    @extend %quote;
 
     &__text {
-      @extend .glue-body;
-
-      @media #{viewport.$media-query-sm-md-exclude} {
-        font-size: 18px;
-        line-height: 28px;
-      }
+      @extend %quote-text;
     }
   }
 
