@@ -59,6 +59,9 @@ h3 {
   margin-bottom: 14px;
 }
 
-p + p {
-  margin-block-start: 1.5em;
+p {
+  + p,
+  + ul {
+    margin-block-start: 1.5em;
+  }
 }
