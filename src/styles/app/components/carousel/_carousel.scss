@@ -1,6 +1,8 @@
 @use '../../colors/variables' as colors;
 @use '../../viewport/variables' as viewport;
-@use '@google/glue/lib/breakpoints/variables' as gb;
+@use '@google/glue/lib/breakpoints/variables' as glue-breakpoints;
+@use '@google/glue/lib/typography';
+@use '@google/glue/lib/typography/variables' as glue-typography;
 
 .app-carousel {
   &__nav-button {
@@ -17,12 +19,12 @@
     background-color: colors.$app-white;
     grid-column-gap: 0;
 
-    @media #{gb.$media-query-sm-md-only} {
+    @media #{glue-breakpoints.$media-query-sm-md-only} {
       grid-auto-rows: max-content;
     }
 
     .glue-grid__col--align-middle {
-      @media #{gb.$media-query-sm-md-only} {
+      @media #{glue-breakpoints.$media-query-sm-md-only} {
         align-self: auto;
       }
     }
@@ -46,18 +48,18 @@
         padding: 60px 20px 60px 60px;
       }
 
-      @media #{gb.$media-query-md-only} {
+      @media #{glue-breakpoints.$media-query-md-only} {
         padding: 48px;
       }
 
-      @media #{gb.$media-query-sm-only} {
+      @media #{glue-breakpoints.$media-query-sm-only} {
         padding: 36px 24px 24px;
       }
     }
 
     .glue-video,
     img:not(.glue-video__preview-image) {
-      @media #{gb.$media-query-md-only} {
+      @media #{glue-breakpoints.$media-query-md-only} {
         padding: 48px 48px 0 48px;
       }
     }
@@ -103,11 +105,20 @@
     color: colors.$app-white;
     bottom: 0;
     left: 0;
-    padding: 20px;
+    padding: 2.725rem;
     position: absolute;
 
-    @media #{gb.$media-query-sm-only} {
-      padding: 15px;
+    @media #{glue-breakpoints.$media-query-sm-md-only} {
+      padding: 1.725rem;
+    }
+
+    &__text {
+      @extend .glue-body;
+
+      @media #{viewport.$media-query-sm-md-exclude} {
+        font-size: 18px;
+        line-height: 28px;
+      }
     }
   }
 
