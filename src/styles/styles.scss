@@ -29,19 +29,20 @@
 // Our stuff
 @use 'app/colors/colors';
 @use 'app/colors/variables' as appColors;
-@use 'app/typography/typography';
 @use 'app/components/banner/banner';
 @use 'app/components/bundle-error/bundle-error';
-@use 'app/components/core-capabilities-card/core-capabilities-card';
 @use 'app/components/carousel/carousel' as appCarousel;
+@use 'app/components/core-capabilities-card/core-capabilities-card';
 @use 'app/components/footer/footer';
 @use 'app/components/grid/grid';
 @use 'app/components/header/header';
 @use 'app/components/hero/hero';
 @use 'app/components/link-bar-dropdown/link-bar-dropdown';
 @use 'app/components/link/link';
-@use 'app/components/use-sensemaking/use-sensemaking';
+@use 'app/components/list/list';
 @use 'app/components/partners/partners';
+@use 'app/components/use-sensemaking/use-sensemaking';
+@use 'app/typography/typography';
 
 
 // Custom overrides
@@ -176,19 +177,6 @@
 
 .g-no-border {
   border: none;
-}
-
-.g-entries {
-  .g-entry {
-    border-bottom: solid 1px appColors.$line-grey;
-    padding-bottom: 1.8rem;
-    margin-bottom: 1.8rem;
-
-    &:last-of-type {
-      border: none;
-      margin-bottom: 0;
-    }
-  }
 }
 
 // Setting the default body
